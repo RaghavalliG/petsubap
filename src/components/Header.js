@@ -123,7 +123,7 @@ const Header = () => {
               </div>
             </nav>
             <div className='utility-links'>
-              <Link to='/mycart'>
+              <Link to={language == 'TH' ? '/th/mycart':'/mycart'}>
                 <img src={cart} alt='' />
               </Link>
             </div>
