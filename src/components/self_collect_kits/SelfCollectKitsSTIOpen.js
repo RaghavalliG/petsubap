@@ -21,6 +21,7 @@ import misc from "../../assets/image/misc.png";
 
 const SelfCollectKitsSTIOpen = () => {
   const [activeOption, setActiveOption] = useState(null);
+  const language = localStorage.getItem('language');
 
   const handleOptionClick = (index) => {
     if (activeOption === index) {
