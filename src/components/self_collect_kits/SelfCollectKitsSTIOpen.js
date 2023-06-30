@@ -53,7 +53,7 @@ const SelfCollectKitsSTIOpen = () => {
                 virus{" "}
               </p>
               <div class='def_btn_opt'>
-                <Link to='/selfcollectkit/sti/kit'>Get Tested </Link>
+                <Link to={language == 'TH' ? '/th/selfcollectkit/sti/kit' :'/selfcollectkit/sti/kit'}>Get Tested </Link>
                 {/* <Link to=''>Get Tested </Link> */}
               </div>
             </div>
@@ -304,10 +304,10 @@ const SelfCollectKitsSTIOpen = () => {
                       </h2>
                       <div class='add_opt_text_des'>
                         <ul>
-                          <li>Get tested whenever, whereever </li>
-                          <li>Get tested whenever, whereever </li>
-                          <li>Get tested whenever, whereever </li>
-                          <li>Get tested whenever, whereever </li>
+                          <li>You and/or your partner want to be safe </li>
+                          <li>You have unprotected sex  </li>
+                          <li>Begining a new relationship and/or ending a relationship </li>
+                          <li>Test every three months if you are sexually active with more than one partner </li>
                         </ul>
                       </div>
                     </div>
@@ -364,24 +364,22 @@ const SelfCollectKitsSTIOpen = () => {
                     <li>
                       <span>1</span>
                       <strong>REGISTER</strong>
-                      เมื่อได้รับชุดตรวจหาเชื้อ AVA แล้ว ลงทะเบียนผ่าน website
-                      บนกล่อง
+                      Once you have received the AVA testing kit, please register through QR code provided on the box.
                     </li>
                     <li>
                       <span>2</span>
                       <strong>COLLECT</strong>
-                      เก็บสิ่งตรวจตามขั้นตอนในคู่มือการเก็บสิ่งตรวจ
+                      Please follow the instructions in the specimen collection manual to properly collect the sample for testing.
                     </li>
                     <li>
                       <span>3</span>
                       <strong>FREE DELIVERY</strong>
-                      เมื่อเก็บเสร็จแล้ว ส่งชุดตรวจกลับไปที่ห้อง lab
-                      ผ่านทางไปรษณีย์โดยไม่เสียค่าใช้จ่าย
+                      Once you have completed the specimen collection, please send the testing kit back to the laboratory using the provided postage-paid return envelope. You will not incur any charges for the return shipment.
                     </li>
                     <li>
                       <span>4</span>
                       <strong>RESULTS</strong>
-                      หลังจากห้อง lab ได้รับสิ่งส่งตรวจ จะแจ้งผลลัพธ์ภายใน 7 วัน
+                      After the laboratory receives the testing kit, you can expect to receive the test results within 7 days.
                     </li>
                   </ul>
                 </div>

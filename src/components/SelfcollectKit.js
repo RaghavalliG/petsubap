@@ -54,19 +54,19 @@ const SelfcollectKit = () => {
               <ul>
                 <li>
                 
-                  Collect sample at least 24 hours after sexual intercourse
+                Reliable results, mRNA test with 97.6% sensitivity and 90.2% specificity 
                 </li>
                 <li>
                 
-                  Collect sample at least 24 hours after sexual intercourse
+                System ensures complete anonymity, safeguarding the confidentiality of your results
                 </li>
                 <li>
                 
-                  Collect sample at least 24 hours after sexual intercourse
+                User-friendly, follow a few steps to collect sample yourself.
                 </li>
                 <li>
                 
-                  Collect sample at least 24 hours after sexual intercourse
+                Convenient, without any long waiting time. 
                 </li>
               </ul>
               <p class='action'>
@@ -91,7 +91,7 @@ const SelfcollectKit = () => {
             </div>
             <h3 class='card-title'>Sarisa G. </h3>
             <p>
-              Easier that I thought, got my results fast, and loved the privacy
+            The packaging is really good. I was pleasantly surprised by the quality of the packaging. At first, I was a little unsure about doing the inspection myself, but it turned out to be perfectly fine. It was not difficult at all. I really liked it. From now on, I would like to purchase this.
             </p>
           </div>
           <div class='col-lg-4 icon-card'>
@@ -100,7 +100,7 @@ const SelfcollectKit = () => {
             </div>
             <h3 class='card-title'>Sarisa G. </h3>
             <p>
-              Easier that I thought, got my results fast, and loved the privacy
+            The testing kit is easy to use, and it comes with clear instructions to ensure completeness. It saves time from having to go to the hospital, as I can simply wait for the results at home.
             </p>
           </div>
           <div class='col-lg-4 icon-card'>
@@ -109,7 +109,7 @@ const SelfcollectKit = () => {
             </div>
             <h3 class='card-title'>Sarisa G. </h3>
             <p>
-              Easier that I thought, got my results fast, and loved the privacy
+            It's great! It's a self-testing kit for cervical cancer, and it's convenient that you can perform the test yourself. It's also reassuring that the kit respects your personal privacy by not requiring personal identification. Once you collect the sample, you can easily send it for testing and wait for the results conveniently. Wonderful!y
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ const SelfcollectKit = () => {
             <div class='col-lg-4 left-sec'>
               <h3 class='section-title'>
             
-                Before Getting Tested
+              Things to Know Before Getting Tested
               </h3>
             </div>
             <div class='col-lg-8'>
@@ -163,7 +163,7 @@ const SelfcollectKit = () => {
                     </svg>
                   </span>
                  
-                  Collect sample at least 24 hours after sexual intercourse
+                  Refrain from collecting sample if you have engaged in sexual intercourse within the past 24 hours.
                 </li>
                 <li>
                   <span class='icon'>
@@ -184,7 +184,7 @@ const SelfcollectKit = () => {
                       />
                     </svg>
                   </span>{" "}
-                  Do not purposely clean collecting area before swap
+                  Avoid intentionally cleaning the collection area before performing the swab.
                 </li>
 
                 <li>
@@ -207,7 +207,7 @@ const SelfcollectKit = () => {
                     </svg>
                   </span>{" "}
                   
-                  Do not use any conception pills before collecting sample
+                  Do not use any conterception pill preferbly 24 - 36 hours before collecting sample 
                 </li>
 
                 <li>
@@ -230,7 +230,7 @@ const SelfcollectKit = () => {
                     </svg>
                   </span>{" "}
                  
-                  Do not collect sample if you received  examined 24 hours before
+                  Do not collect sample if have had physical examination within the past 24 hours 
                 </li>
 
                 <li>
@@ -253,7 +253,7 @@ const SelfcollectKit = () => {
                       />
                     </svg>
                   </span>{" "}
-                  Collect sample 5-7 days after your period ends
+                  Collect sample at least 5-7 days after period ends 
                 </li>
               </ul>
             </div>
