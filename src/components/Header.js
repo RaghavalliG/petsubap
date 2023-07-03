@@ -156,7 +156,7 @@ function Header(){
                   <NavLink to={language == 'EN' ? `/th${url}` : ``} onClick={(e) => changeLanguage(e, 'TH')}> TH </NavLink>
 
                 </li>
-                {url}
+                
               </ul>
               <Link to='' className='menu-close-btn'>
                 &times;
@@ -171,7 +171,7 @@ function Header(){
               </div>
             </nav>
             <div className='utility-links'>
-              <Link to='/mycart'>
+              <Link to={language == 'TH' ? '/th/mycart' :'/mycart'}>
                 <img src={cart} alt='' />
               </Link>
             </div>
