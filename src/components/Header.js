@@ -109,7 +109,7 @@ function Header(){
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-lg-3 col-4 brand'>
-            <Link to='/'>
+          <Link to={language == 'TH' ? '/th' : '/'}>
               <img src={logo} alt='' />
             </Link>
           </div>
