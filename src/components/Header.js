@@ -96,7 +96,7 @@ function Header(){
         .querySelectorAll(".menu-close-btn")[0]
         .removeEventListener("click", handleMenuClose);
     };
-  }, [setUrl]);
+  }, []);
   // useEffect(() => {
   //   setRandonKey(Math.random());
   //   return () => {
@@ -109,7 +109,7 @@ function Header(){
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-lg-3 col-4 brand'>
-          <Link to={language == 'TH' ? '/th' : '/'}>
+            <Link to={language == 'TH' ? '/th' : '/'}>
               <img src={logo} alt='' />
             </Link>
           </div>
@@ -171,7 +171,7 @@ function Header(){
               </div>
             </nav>
             <div className='utility-links'>
-              <Link to={language == 'TH' ? '/th/mycart' :'/mycart'}>
+            <Link to={language == 'TH' ? '/th/mycart' :'/mycart'}>
                 <img src={cart} alt='' />
               </Link>
             </div>
