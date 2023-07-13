@@ -68,7 +68,9 @@ const MyCart = () => {
       })
       // alert('The product '+cart[foundIndex].name+' is removed');
       console.log('---------------->')
-      cart.pop(cart[foundIndex]);
+      const foundObject = cart.find(obj => obj.id === value.id);
+      console.log(cart[foundIndex])
+      cart.splice(foundIndex,1);
       localStorage.setItem('cart',JSON.stringify(cart));
       
     }else{
