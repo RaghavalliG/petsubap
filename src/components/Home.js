@@ -35,7 +35,9 @@ const Home = () => {
   const [bannerData, setBannerData] = useState([
     { "img": "images/AVA_banner.jpg", "link": "#" },
     { "img": "images/Banner_HPV .jpg", "link": "#" },
-    { "img": "images/banner_1.jpg", "link": "#" },
+    { "img": "images/home-vid-banner-eng.png", "link": "#" },
+    // { "img": "/static/media/home-vid-banner-eng.d5ba04753f0ab48670bf.png", "link": "#" },
+    
   ]);
   const [hvid_play, set_hvid_play] = useState(false);
 
@@ -64,6 +66,7 @@ const Home = () => {
           {bannerData.map((item, ind) => (
             <div className={`carousel-item ${ind === 0 ? 'active' : ''}`} key={'banner_' + ind}>
               <img src={item.img} className='d-block w-100' alt='...' />
+              {/* {console.log(item.img,"+++++>>>>+++----->>")} */}
             </div>
           ))}
 
@@ -142,20 +145,22 @@ const Home = () => {
 
             Watch
           </h2>
-          {!hvid_play && 
+          {/* {!hvid_play && 
           <div className="banner-preview-img home-vid-preview" onClick={()=>video_play()} style={{cursor: 'pointer'}}>
             <img src={Home_vid_img} alt='' className='floated-img mb-2' />
           </div>
           }
-          {hvid_play && 
+          {hvid_play &&  */}
           <div className='iframe-embade home-vid-iframe'>
             <img src={new_text} alt='' className='floated-img mb-2' />
-            <div className="embed-responsive embed-responsive-container"><iframe className="responsive-iframe" src="https://www.youtube.com/embed/zpOULjyy-n8?autoplay=1" 
+            <div className="embed-responsive embed-responsive-container"><iframe className="responsive-iframe" 
+            // src="https://www.youtube.com/embed/zpOULjyy-n8?autoplay=1" 
+            src="https://www.youtube.com/embed/V4yyrI-48J0?autoplay=1" 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-             allowFullScreen
+             allowFullScreen autoplay="false"
             ></iframe></div>
           </div>
-          }
+          {/* // } */}
         </div>
       </div>
 
@@ -190,44 +195,48 @@ const Home = () => {
         <div className='container recent-blog-bg'>
           <div className='blogs-w d-flex'>
             <div className='item'>
-              <Link to="/knowledge">
+              <Link to="/knowledge/blog/Debunking_Misconceptions_of_HPV">
               <div className='graphic'>
                 <img src={blog_thumb__1} alt='' />
               </div>
               <h3 className='blog-title'>
 
-              The Rise of HPV Infections: Understanding the Need for Increased Testing in Thailand
+              {/* The Rise of HPV Infections: Understanding the Need for Increased Testing in Thailand */}
+              Debunking Misconceptions of HPV
               </h3>
               </Link>
             </div>
             <div className='item'>
-            <Link to="/knowledge">
+            <Link to="/knowledge/blog/E-Ciggarettes_and_Cervical_Cancer">
               <div className='graphic'>
                 <img src={blog_thumb__2} alt='' />
               </div>
               <h3 className='blog-title'>
 
-              Debunking Common Misconceptions about HPV and HPV Testing
+              {/* Debunking Common Misconceptions about HPV and HPV Testing */}
+              E-Ciggarettes and Cervical Cancer
               </h3>
               </Link>
             </div>
             <div className='item'>
-            <Link to="/knowledge">
+            <Link to="/knowledge/blog/The_Rise_of_HPV_Infections">
               <div className='graphic'>
                 <img src={blog_thumb__4} alt='' />
               </div>
               <h3 className='blog-title'>
-              Navigating Sexual Health Education in Thailand: How Pedsupab wants to Make a Difference
+              {/* Navigating Sexual Health Education in Thailand: How Pedsupab wants to Make a Difference */}
+              The Rise of HPV Infections
               </h3>
               </Link>
             </div>
             <div className='item'>
-            <Link to="/knowledge">
+            <Link to="/knowledge/blog/Can_Sex_Cause_Stress">
               <div className='graphic'>
                 <img src={blog_thumb__5} alt='' />
               </div>
               <h3 className='blog-title'>
-              Understanding the Importance of HPV Testing: Why Early Detection Matters
+              {/* Understanding the Importance of HPV Testing: Why Early Detection Matters */}
+              Can Sexual Activity Caause Stress
               </h3>
               </Link>
             </div>
