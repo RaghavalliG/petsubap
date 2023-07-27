@@ -25,6 +25,8 @@ import Alert from 'react-popup-alert';
 
 
 const MyCart = () => {
+  // const [reloadKey, setReloadKey] = useState(1)
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : []);
 
   // var json_encode = require('json_encode');
   // var createHmac = require('create-hmac');
@@ -41,7 +43,7 @@ const MyCart = () => {
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [affiliateCode, setAffiliate] = useState('');
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')));
+  // const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')));
   let total = 0;
   const [reloadKey, setReloadKey] = useState(1)
   const [alert, setAlert] = React.useState({
@@ -110,12 +112,12 @@ const MyCart = () => {
     // setReloadKey(Math.random());
   };
 
-  const handleCreditDebit = () => {
-    document.querySelectorAll('#creditDebitCard')[0].style.display = "block";
-  }
+  // const handleCreditDebit = () => {
+  //   document.querySelectorAll('#creditDebitCard')[0].style.display = "block";
+  // }
   useEffect(() => {
 
-    document.querySelectorAll('#creditDebitCard')[0].style.display = "none";
+    // document.querySelectorAll('#creditDebitCard')[0].style.display = "none";
     // let cartlocal = JSON.parse(localStorage.getItem('cart'));
     // cart.push(cartlocal)
     console.log(cart);
@@ -125,13 +127,13 @@ const MyCart = () => {
     name: '',
     phone: '',
     address: '',
-    province: '',
-    district: '',
+    province: 'Thailand',
+    district: 'Thailand',
     postalCode: '',
     email: '',
-    cardNumber: '',
-    expiryDate: '',
-    cvv: '',
+    // cardNumber: '',
+    // expiryDate: '',
+    // cvv: '',
     affiliateCode: '',
     invoiceNo: Date.now()
   };
@@ -146,9 +148,9 @@ const MyCart = () => {
     email: yup.string()
       .required("email is required")
       .email("Email should be in correct format"),
-    cardNumber: yup.string().required("Card Number is required"),
-    expiryDate: yup.string().required("expiry Date  is required"),
-    cvv: yup.string().required("Cvv is required"),
+    // cardNumber: yup.string().required("Card Number is required"),
+    // expiryDate: yup.string().required("expiry Date  is required"),
+    // cvv: yup.string().required("Cvv is required"),
     // amount: yup.string().required("amount is required"),
   });
 
@@ -180,7 +182,7 @@ const MyCart = () => {
       // secretKey = "C155E4D4A2A68503C878673E9ED0320718F8B0442C28835D556CDEBB1B5AFBFB";
 
       values.amount = total;
-      values.currencyCode = 'USD';
+      values.currencyCode = 'THB';
       values.description = 'item 1';
 
       // values.frontendReturnUrl = 'http://localhost:3000/order/thank-you';
@@ -264,7 +266,7 @@ const MyCart = () => {
 
   return (
     <div className='site-wrap'>
-      <Header />
+      <Header key={reloadKey} productscount={cart?.length > 0 ? cart?.length : ''}/>
       <div className='cart-page-inner-banner'>
         <div className='container'>
           <h1 className='page-title'>My Cart</h1>
@@ -324,22 +326,23 @@ const MyCart = () => {
                         <select className='form-select' id='province'
                           value={values.province}
                           onChange={handleChange}
+                          defaultValue='Thailand'
                           onBlur={handleBlur}>
-                          <option value=''>Select Province</option>
+                          <option value='Thailand'>Thailand</option>
                           <option value='Ontario'>Ontario</option>
                           <option value='Quebec'>Quebec</option>
-                          <option value='British Columbia'>
+                          <option value='British_Columbia'>
                             British Columbia
                           </option>
                           <option value='Alberta'>Alberta</option>
                           <option value='Manitoba'>Manitoba</option>
                           <option value='Saskatchewan'>Saskatchewan</option>
-                          <option value='New Brunswick'>New Brunswick</option>
-                          <option value='Nova Scotia'>Nova Scotia</option>
-                          <option value='Prince Edward Island'>
+                          <option value='New_Brunswick'>New Brunswick</option>
+                          <option value='Nova_Scotia'>Nova Scotia</option>
+                          <option value='Prince_Edward_Island'>
                             Prince Edward Island
                           </option>
-                          <option value='Newfoundland and Labrador'>
+                          <option value='Newfoundland_and_Labrador'>
                             Newfoundland and Labrador
                           </option>
                         </select>
@@ -352,8 +355,9 @@ const MyCart = () => {
                         <select className='form-select' id='district'
                           value={values.district}
                           onChange={handleChange}
+                          defaultValue='Thailand'
                           onBlur={handleBlur}>
-                          <option value=''>Select District</option>
+                          <option value='Thailand'>Thailand</option>
                           <option value='Toronto'>Toronto</option>
                           <option value='Montreal'>Montreal</option>
                           <option value='Vancouver'>Vancouver</option>
@@ -397,14 +401,14 @@ const MyCart = () => {
                   </div>
                 </div>
 
-                <div className='card card-payment-method'>
+                {/* <div className='card card-payment-method'>
                   <div className='card-header text-color-pink'>My Payment Method</div>
                   <div className='card-body'>
                     <div className='btn-groups'>
                       <button type='button' className='btn btn-secondary' onClick={handleCreditDebit}>
                         Credit/Debit Card
                       </button>
-                      {/* <form onSubmit={handleSubmit} method='post'> */}
+                      
                       <div className="card-body">
                         <div className='row' id="creditDebitCard">
 
@@ -467,22 +471,22 @@ const MyCart = () => {
                               {errors.invoiceNo && touched.invoiceNo ? (<p className="text-danger">{errors.invoiceNo}</p>) : null}
                             </p>
                           </div>
-                          {/* <button type='submit' className='btn btn-primary'>
+                          <button type='submit' className='btn btn-primary'>
                             ADD Card Details
 
-                          </button> */}
+                          </button>
                         </div>
                       </div>
 
-                      {/* <button type='button' className='btn btn-secondary'>
+                      <button type='button' className='btn btn-secondary'>
                       Bank Transfer
                     </button>
                     <button type='button' className='btn btn-secondary'>
                       Promptpay/QR
-                    </button> */}
+                    </button>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
               </div>
               <div className='col-lg-5'>

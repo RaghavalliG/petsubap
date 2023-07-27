@@ -12,6 +12,8 @@ const SelfCollectKitsSTIKit = () => {
   let [total, setTotal] = useState(0);
   const [reloadKey, setReloadKey] = useState(1)
 
+  const [disabled, setDisabled] = useState(false);
+
   const products = [
     {
         id:'2',
@@ -58,7 +60,10 @@ const SelfCollectKitsSTIKit = () => {
       console.log(cart);
       console.log(total);
       // document.querySelectorAll('.removecart_but')[0].style.display = "block";
-      document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+      // document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+      setDisabled(true);
+      setReloadKey(Math.random());
+      window.scrollTo(0, 0);
       
     }
 
@@ -75,7 +80,8 @@ const SelfCollectKitsSTIKit = () => {
           console.log(cart);
           // localStorage.setItem('cart', JSON.stringify(cart));
           // document.querySelectorAll('.removecart_but')[0].style.display = "block";
-          document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+          // document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+          setDisabled(true);
         } else {
           console.log('Object not found');
         }
@@ -86,7 +92,7 @@ const SelfCollectKitsSTIKit = () => {
     }, [])
   return (
     <div class='site-wrap'>
-      <Header />
+      <Header key={reloadKey} productscount={cart?.length > 0 ? cart?.length : ''}/>
       <div class='inner_content_outer'>
         <div class='sep1'></div>
         <div class='bandcamp_info'>
@@ -141,7 +147,7 @@ const SelfCollectKitsSTIKit = () => {
                         <span class='prod_inc_opt' onClick={handlePlusClick}> + </span>
                       </div>
                       <div class='add_tocard_opt'>
-                        <button type='button' onClick={(e) => addToCart(e,product)} class='addtocart_but'>
+                        <button type='button' disabled={disabled} onClick={(e) => addToCart(e,product)} class='addtocart_but'>
                           ADD TO CART
                         </button>
                       </div>

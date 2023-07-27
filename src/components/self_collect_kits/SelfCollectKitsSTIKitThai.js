@@ -12,6 +12,8 @@ const SelfCollectKitsSTIKitThai = () => {
   let [total, setTotal] = useState(0);
   const [reloadKey, setReloadKey] = useState(1)
 
+  const [disabled, setDisabled] = useState(false);
+
   const products = [
     {
         id:'2',
@@ -58,7 +60,10 @@ const SelfCollectKitsSTIKitThai = () => {
       console.log(cart);
       console.log(total);
       // document.querySelectorAll('.removecart_but')[0].style.display = "block";
-      document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+      // document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+      setDisabled(true);
+      setReloadKey(Math.random());
+      window.scrollTo(0, 0);
       
     }
 
@@ -75,7 +80,8 @@ const SelfCollectKitsSTIKitThai = () => {
           console.log(cart);
           // localStorage.setItem('cart', JSON.stringify(cart));
           // document.querySelectorAll('.removecart_but')[0].style.display = "block";
-          document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+          // document.querySelectorAll('.add_tocard_opt')[0].style.display = "none";
+          setDisabled(true);
         } else {
           console.log('Object not found');
         }
@@ -86,7 +92,7 @@ const SelfCollectKitsSTIKitThai = () => {
     }, [])
   return (
     <div class='site-wrap'>
-      <Header />
+      <Header key={reloadKey} productscount={cart?.length > 0 ? cart?.length : ''}/>
       <div class='inner_content_outer'>
         <div class='sep1'></div>
         <div class='bandcamp_info'>
@@ -141,7 +147,7 @@ const SelfCollectKitsSTIKitThai = () => {
                         <span class='prod_inc_opt' onClick={handlePlusClick}> + </span>
                       </div>
                       <div class='add_tocard_opt'>
-                        <button type='button' class='addtocart_but' onClick={(e) => addToCart(e,product)}>
+                        <button type='button' disabled={disabled} class='addtocart_but' onClick={(e) => addToCart(e,product)}>
                         ใส่ตะกร้า
                         </button>
                       </div>

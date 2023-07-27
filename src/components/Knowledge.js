@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,10 +10,13 @@ import imag_blog2 from "../assets/image/image_blog2.jpg";
 
 
 const Knowledge = () => {
+  const [reloadKey, setReloadKey] = useState(1)
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : []);
+
 
   return (
     <div className='site-wrap blog-page'>
-      <Header />
+      <Header key={reloadKey} productscount={cart?.length > 0 ? cart?.length : ''}/>
 
       <div className='knoledge-big-banner'>
         <h1 className='text-center'>
@@ -302,7 +305,7 @@ const Knowledge = () => {
                 <div className='col-lg-5 content'>
                   <h2 className='post-title'>
 
-                    Can Sexual Activity Caause Stress
+                    Can Sexual Activity Cause Stress
                   </h2>
                   <div className='post-meta'>Pedsupab Team 17 July 2023</div>
                   <p>
@@ -342,7 +345,7 @@ const Knowledge = () => {
                   1
                 </Link>
               </li>
-              <li className='page-item'>
+              {/* <li className='page-item'>
                 <Link className='page-link' to='#'>
                   2
                 </Link>
@@ -351,7 +354,7 @@ const Knowledge = () => {
                 <Link className='page-link' to='#'>
                   3
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
