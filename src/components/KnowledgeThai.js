@@ -7,6 +7,8 @@ import knowlage_title from "../assets/image/knowlage_title.png";
 import Blog_Highlight from "../assets/image/Blog-Highlight.png";
 import blog_img from "../assets/image/blog-img.png";
 import imag_blog2 from "../assets/image/image_blog2.jpg";
+import imag_blog3 from "../assets/image/img_blog3.jpg";
+
 
 
 const KnowledgeThai = () => {
@@ -22,7 +24,7 @@ const KnowledgeThai = () => {
           <img src={knowlage_title} alt='' />
         </h1>
         <p className='page-sub-title text-center'>
-          พื้นที่แบ่งปันเรื่องที่ควรรู้ เพราะความรู้จะมีค่าเมื่อเกิดการบอกต่อ
+        ความรู้คือขุมทรัพย์
 
         </p>
         <div className='text-center mb-5'>
@@ -132,19 +134,16 @@ const KnowledgeThai = () => {
                     ซึ่งไม่ว่าจะเป็นผู้หญิงหรือผู้ชายควรมีความยิมยอมกันทั้งสองฝ่ายไม่ว่าจะใส่ถุงหรือไม่ใส่
                     ส่วนใหญ่เรามักจะได้ยินมาว่าถ้าสดแล้วจะฟิลลื่นกว่าแบบถุง
                     ซึ่งอาจจะไม่จริงเสมอไปเพราะถุงยางอนามัยในปัจุบันนี้ต่างผลิตออกมาแข่งขันกันเรื่องสรรพคุณความบางเฉียบเหมือนไม่ใ
-                    ส่ ฟิลเนื้อแนบเนื้อ แถมยังมีสารหล่อลื่นเลียนแบบธรรมชาติ
-                    หลายยี่ห้อต่างโฆษณาถึงความลื่นของสารหล่อลื่นชนิดที่ว่าลื่นเสมือนของธรรมชาติ
-                    แต่ก็มีบางคนที่ชอบสอดใส่สดโดยไม่ใส่ถุงยาง อาจเพราะเหตุผลแพ้ถุงยางอนามัย หรือก็เราคบกันแล้วจะไปกังวลทำไม
-                    เหตุผลความเชื่อใจ
+                  
                   </p>
 
-                  <p>
+                  {/* <p>
 
                     การมีเพศสัมพันธ์ภายนอก การเล้าโลม การใช้ปาก (Oral Sex ) ไม่ว่าจะแบบไหนไม่สอดใส่เข้าไป
                     ก็มีความเสี่ยงที่จะติดโรคติดต่อทางเพศสัมพันธ์
                     ผ่านทางสารคัดหลั่งของร่างกายบางคนร่างกายแข็งแรงภูมิคุ้มกันไม่บกพร่องก็สามารถต้านเชื้อเองได้
                     แล้วถ้าร่างกายไม่แข็งแรงมีโอกาสเสี่ยงติดโรคติดต่อทางเพศสัมพันธ์ได้
-                  </p>
+                  </p> */}
                   <Link to='/th/knowledge/blog/Can_No_Protection_Sex_Be_Safe' className='btn btn-pill-outline '>
 
                     Read More
@@ -179,12 +178,12 @@ const KnowledgeThai = () => {
                     ในบล็อกนี้ เราจะข้อแก้อกไขความเข้าใจผิดเกี่ยวกับ HPV (Human Papillomavirus) และการตรวจ HPV โดยการปฏิเสธความเชื่อที่ผิดและให้ข้อมูลที่ถูกต้อง เราหวังว่าจะจัดหาความรู้ที่จำเป็นให้คุณเพื่อที่คุณจะสามารถควบคุมสุขภาพเพศสัมพันธ์ของตัวเองได้ มาเริ่มกันเถอะ!
                   </p>
 
-                  <p>
+                  {/* <p>
 
                     การทำความเข้าใจ HPV และความเชื่อมโยงกับมะเร็งปากมดลูก:
 
                     HPV เป็นโรคติดเชื้อทางเพศที่พบบ่อยที่สุดในทั้งชายและหญิง ขัดกับความเชื่อที่เป็นที่นิยม HPV ไม่จำกัดเฉพาะกลุ่มหรือช่วงอายุ มันสามารถถูกแพร่กระจายผ่านกิจกรรมเพศที่หลากหลาย รวมถึงเพศสัมพันธ์ทางช่องคลอด เพศสัมพันธ์ทางทวารหนัก และเพศสัมพันธ์ทางปาก รวมถึงการสัมผัสผิวหนังที่ใกล้ชิดm
-                  </p>
+                  </p> */}
                   <Link to='/th/knowledge/blog/Debunking_Misconceptions_of_HPV' className='btn btn-pill-outline '>
 
                     Read More
@@ -221,12 +220,12 @@ const KnowledgeThai = () => {
 
                   </p>
 
-                  <p>
+                  {/* <p>
 
                     การกระตุ้นผ่านกระแสเลือด
 
                     เชื้อ HPV ส่วนใหญ่มีผู้ชายเป็นพาหะ ดังนั้นการมีเพศสัมพันธ์เป็นสาเหตุ ถึง 90% (ปัจจัยอื่นอีกอีก 10% เช่น ห้องน้ำสาธาณะ) เพราะฉะนั่นคุณมีเพศสัมพันธ์ผ่านช่องทางไหนตรงนั้นก็สามารถเป็นมะเร็งหรือหูดเพราะเชื้อ HPV ได้ทั้งหมด
-                  </p>
+                  </p> */}
                   <Link to='/th/knowledge/blog/E-Ciggarettes_and_Cervical_Cancer' className='btn btn-pill-outline '>
 
                     Read More
@@ -263,12 +262,12 @@ const KnowledgeThai = () => {
 
                   </p>
 
-                  <p>
+                  {/* <p>
 
                     ทั้งยังพบด้วยว่าผู้ที่ติดเชื้อ HIV มีโอกาสเสี่ยงเป็นมะเร็งปากมดลูกกว่าคนที่ไม่ติดเชื้อถึง 6 เท่า
 
                     ทางองค์การอนามัยโลกจึงมีเป้าหมายให้ในปี 2030 ทุกประเทศทั่วโลกมีผู้ป่วยมะเร็งปากมดลูกน้อยกว่า 4 รายต่อประชากร 100,000 คนและคงไว้ จึงวางกลยุทธ์ 90-70-90
-                  </p>
+                  </p> */}
                   <Link to='/th/knowledge/blog/The_Rise_of_HPV_Infections' className='btn btn-pill-outline '>
 
                     Read More
@@ -290,7 +289,7 @@ const KnowledgeThai = () => {
             <div className='post-article card'>
               <div className='row'>
                 <div className='col-lg-7 graphic'>
-                  <img src={blog_img} alt='' className='image-fluid' />
+                  <img src={imag_blog3} alt='' className='image-fluid' />
                 </div>
                 <div className='col-lg-5 content'>
                   <h2 className='post-title'>

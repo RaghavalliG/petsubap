@@ -11,6 +11,11 @@ const Faq = () => {
   const [reloadKey, setReloadKey] = useState(1)
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : []);
 
+  const [hpvCard, sethpvCard] = useState(false);
+  const [stiCard, setstiCard] = useState(false);
+  const [shCard, setshCard] = useState(false);
+
+
   useEffect(() => {
     allFaQ()
     
@@ -29,10 +34,15 @@ const Faq = () => {
     for( i = 0; i < document.querySelectorAll('.hpv').length; i++) {
       document.querySelectorAll('.hpv')[i].style.display = "none";
     }
+
+    document.querySelector('#hpvcard').classList.remove('active');
+    document.querySelector('#sticard').classList.remove('active');
+    document.querySelector('#shcard').classList.remove('active');
     
   }
   const HpvConnection=(e)=>{
     console.log('clicked')
+    // setCard('hpv');
     // e.currentTarget.classList.add('active');
     // document.querySelector('#hpvcard')[0].add('className','active');
     console.log(document.querySelectorAll('.all-faq').length)
@@ -47,13 +57,16 @@ const Faq = () => {
     }
     for(var i = 0; i < document.querySelectorAll('.hpv').length; i++) {
       document.querySelectorAll('.hpv')[i].style.display = "block";
+      // document.querySelectorAll('#hpvcard')[i]
+     
     }
+    console.log(document.querySelector('#hpvcard'));
+    // 👇️ toggle isActive state on click
+   
+    document.querySelector('#hpvcard').classList.add('active');
+    document.querySelector('#sticard').classList.remove('active');
+    document.querySelector('#shcard').classList.remove('active');
     
-    
-    
-    // document.getElementById('hpvcard').classList.add("active")
-    // document.querySelector("hpv").show()
-    // document.querySelector("all-faq,sti,ava").hide()
 
   }
   const stiConnection=(e)=>{
@@ -65,6 +78,7 @@ const Faq = () => {
     }
     for(var i = 0; i < document.querySelectorAll('.sti').length; i++) {
       document.querySelectorAll('.sti')[i].style.display = "block";
+      
     }
     for(var i = 0; i < document.querySelectorAll('.ava').length; i++) {
       document.querySelectorAll('.ava')[i].style.display = "none";
@@ -72,6 +86,9 @@ const Faq = () => {
     for(var i = 0; i < document.querySelectorAll('.hpv').length; i++) {
       document.querySelectorAll('.hpv')[i].style.display = "none";
     }
+    document.querySelector('#hpvcard').classList.remove('active');
+    document.querySelector('#sticard').classList.add('active');
+    document.querySelector('#shcard').classList.remove('active');
   
   }
   const shConnection=(e)=>{
@@ -86,10 +103,14 @@ const Faq = () => {
     }
     for(var i = 0; i < document.querySelectorAll('.ava').length; i++) {
       document.querySelectorAll('.ava')[i].style.display = "block";
+      
     }
     for(var i = 0; i < document.querySelectorAll('.hpv').length; i++) {
       document.querySelectorAll('.hpv')[i].style.display = "none";
     }
+    document.querySelector('#hpvcard').classList.remove('active');
+    document.querySelector('#sticard').classList.remove('active');
+    document.querySelector('#shcard').classList.add('active');
   }
   return (
     <div className='site-wrap'>
@@ -137,7 +158,7 @@ const Faq = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-md-4'>
-              <div className='card ' id="hpvcard" onClick={(e)=>HpvConnection()}>
+              <div className={`card  `} key={reloadKey} id="hpvcard" onClick={(e)=>HpvConnection()}>
                 <div className='graphic'>
                   <img src={faq_col_1} alt='' />
                 </div>
@@ -145,7 +166,7 @@ const Faq = () => {
               </div>
             </div>
             <div className='col-md-4'>
-              <div className='card' id="sticard" onClick={(e)=>stiConnection()}>
+              <div className={`card  `} key={reloadKey} id="sticard" onClick={(e)=>stiConnection()}>
                 <div className='graphic'>
                   <img src={faq_col_2} alt='' />
                 </div>
@@ -153,7 +174,7 @@ const Faq = () => {
               </div>
             </div>
             <div className='col-md-4'>
-              <div className='card' id="shcard" onClick={(e)=>shConnection()}>
+              <div className={`card  `} key={reloadKey} id="shcard" onClick={(e)=>shConnection()}>
                 <div className='graphic'>
                   <img src={faq_col_3} alt='' />
                 </div>
