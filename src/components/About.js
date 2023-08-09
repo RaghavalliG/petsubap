@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../style.css";
@@ -16,6 +16,10 @@ import team_img_8 from "../assets/image/team_img_8.png";
 import team_img_9 from "../assets/image/team_img_9.png";
 import team_img_10 from "../assets/image/team_img_10.png";
 import team_img_11 from "../assets/image/team_img_11.png";
+import Suphanat_N from "../assets/image/Suphanat N.JPG";
+import Wasinee_M from "../assets/image/Wasinee M.JPG";
+import Attapon_L from "../assets/image/Attapon L.JPG"
+
 import { Link } from "react-router-dom";
 import TeamTextHighlight from "../iconComponents/TeamTextHighlight";
 
@@ -42,7 +46,7 @@ const About = () => {
             <div className='row'>
               <div className='col-lg-3 '>
                 <h1 className='page-title text-right'>
-                 
+
                   About Us
                 </h1>
               </div>
@@ -58,12 +62,12 @@ const About = () => {
                 <div className='card'>
                   <div className='card-body'>
                     <h4 className='card-title'>
-                     
+
                       Not talking about sex, protection, and sexual health ends
                       up being more harmful than we realize.
                     </h4>
                     <p className='card-text'>
-                     
+
                       Focusing on sexual reproductive health, we are committed
                       to providing everyone with centralized, trusted,
                       academically, and professionally sourced sex education.
@@ -71,11 +75,11 @@ const About = () => {
                       understanding your own body.
                     </p>
                     <h2 className='section-heading-primary'>
-                
+
                       We're your nonjudging best friend
                     </h2>
                     <p className='card-text'>
-                   
+
                       and so… no matter what you're going through, concerns, or
                       questions you might have, we are only one phone call (or
                       message😉) away.
@@ -87,14 +91,14 @@ const About = () => {
           </div>
         </div>
 
-       
+
         <section className='about-team pb-0'>
           <div className='container'>
             <h2 className='primary-title'>
-           
-            Meet our <span className="circle-wrap-highlight">TEAM 
+
+              Meet our <span className="circle-wrap-highlight">TEAM
                 <div className="circle-svg"><TeamTextHighlight /></div>
-            </span>
+              </span>
             </h2>
             <div className='row'>
               {/** 
@@ -105,7 +109,9 @@ const About = () => {
                   </div>
                   <h4 className='card-title'>Chantamas Chatraporn</h4>
                   <p className='color-blue sub-title'>Manager </p>
-                  <p className='quote'>จงเติบโตเป็นผู้ใหญ่ที่แข็งแรง</p>
+                  <p 
+                  // className='quote'
+                  >จงเติบโตเป็นผู้ใหญ่ที่แข็งแรง</p>
                 </div>
               </div>
 */}
@@ -115,55 +121,75 @@ const About = () => {
                   <div className='graphic'>
                     <img src={team_img_10} alt='Team Member' />
                   </div>
-                  <h4 className='card-title'>Sarisa Gajaseni</h4>
+                  <h4 className='card-title'>Sarisa G</h4>
                   <p className='color-green sub-title'>
-                  Team Leader
+                    Team Leader
                     <br />
                   </p>
-                  <p className='quote'>
+                  {/* <p
+                  // className='quote'
+                  >
                     โลกนี้ไม่มีที่ยืนของคนอ่อนแอ แต่ไม่เป็นไร งั้นเรานั่งก็ได้
-                  </p>
+                  </p> */}
                 </div>
               </div>
 
               <div className='col-md-4'>
                 <div className='team-card bg-2'>
                   <div className='graphic'>
-                    <img src={team_img_9} alt='Team Member' />
+                    <img src={team_img_11} alt='Team Member' />
                   </div>
-                  <h4 className='card-title'>Thitharee </h4>
+                  <h4 className='card-title'>Thitharee K </h4>
                   <p className='color-orange sub-title'>Advisor </p>
-                  <p className='quote'>เกิดมามีชีวิตเดียว อยากทำไรก็ทำไปเถอะ</p>
+                  {/* <p
+                  // className='quote'
+                  >เกิดมามีชีวิตเดียว อยากทำไรก็ทำไปเถอะ</p> */}
                 </div>
               </div>
-              <div className='col-md-4'>
+              {/* <div className='col-md-4'>
                 <div className='team-card bg-1'>
                   <div className='graphic'>
                     <img src={team_img_1} alt='Team Member' />
                   </div>
                   <h4 className='card-title'>Chantamas Chatraporn</h4>
                   <p className='color-blue sub-title'>Business Development & Pharmarcist  </p>
-                  <p className='quote'>จงเติบโตเป็นผู้ใหญ่ที่แข็งแรง</p>
+                  <p 
+                  // className='quote'
+                  >จงเติบโตเป็นผู้ใหญ่ที่แข็งแรง</p>
                 </div>
-              </div>
+              </div> */}
               <div className='col-md-4'>
                 <div className='team-card bg-2'>
                   <div className='graphic'>
-                    <img src={team_img_2} alt='Team Member' />
+                    <img src={Suphanat_N} alt='Team Member'
+                      style={{
+                        borderRadius: '50%',
+                        width: '140px',
+                        height: '140px',
+                      }} />
                   </div>
-                  <h4 className='card-title'>Suphanat Nakanukrao</h4>
+                  <h4 className='card-title'>Suphanat N</h4>
                   <p className='color-orange sub-title'>Creative </p>
-                  <p className='quote'>เกิดมามีชีวิตเดียว อยากทำไรก็ทำไปเถอะ</p>
+                  {/* <p
+                  // className='quote'
+                  >เกิดมามีชีวิตเดียว อยากทำไรก็ทำไปเถอะ</p> */}
                 </div>
               </div>
               <div className='col-md-4'>
                 <div className='team-card bg-3'>
                   <div className='graphic'>
-                    <img src={team_img_3} alt='Team Member' />
+                    <img src={Attapon_L} alt='Team Member'
+                      style={{
+                        borderRadius: '50%',
+                        width: '140px',
+                        height: '140px',
+                      }} />
                   </div>
-                  <h4 className='card-title'>Attapon Laoporn</h4>
+                  <h4 className='card-title'>Attapon L</h4>
                   <p className='color-blue sub-title'>Creative </p>
-                  <p className='quote'>เชื่อมั่น & ทำความดีด้วยสติ ✨</p>
+                  {/* <p
+                  // className='quote'
+                  >เชื่อมั่น & ทำความดีด้วยสติ ✨</p> */}
                 </div>
               </div>
 
@@ -172,62 +198,79 @@ const About = () => {
                   <div className='graphic'>
                     <img src={team_img_8} alt='Team Member' />
                   </div>
-                  <h4 className='card-title'>Vivian Schnepp</h4>
+                  <h4 className='card-title'>Vivian S</h4>
                   <p className='color-green sub-title'>Creative </p>
-                  <p className='quote'>
+                  {/* <p
+                  // className='quote'
+                  >
                     เงื่อนไขที่ว่า แก้งานได้ 2 ครั้งมีอยู่จริง คือ “ครั้งแล้ว”
                     และ “ครั้งเล่า”
-                  </p>
+                  </p> */}
                 </div>
               </div>
 
               <div className='col-md-4'>
                 <div className='team-card bg-2'>
                   <div className='graphic'>
-                    <img src={team_img_4} alt='Team Member' />
+                    <img src={team_img_5} alt='Team Member' />
                   </div>
-                  <h4 className='card-title'>Saranya Punkum</h4>
+                  <h4 className='card-title'>Saranya P</h4>
                   <p className='color-orange sub-title'>
-                  Team Coordinator 
+                    Team Coordinator
                   </p>
-                  <p className='quote'>“ ทุกอย่างมีเวลาของมัน ”</p>
+                  {/* <p
+                  // className='quote'
+                  >“ ทุกอย่างมีเวลาของมัน ”</p> */}
                 </div>
               </div>
               <div className='col-md-4'>
                 <div className='team-card bg-3'>
                   <div className='graphic'>
-                    <img src={team_img_5} alt='Team Member' />
+                    <img src={team_img_9} alt='Team Member' />
                   </div>
-                  <h4 className='card-title'>Anchisa Aeungchuen</h4>
+                  <h4 className='card-title'>Anchisa A</h4>
                   <p className='color-green sub-title'>
-                  Content & Admin 
+                    Content & Admin
                   </p>
-                  <p className='quote'>
+                  {/* <p
+                  // className='quote'
+                  >
                     เพื่อนกิน เพื่อนกัน เพื่อนกินไม่ทัน เพื่อนกันเอาไปกิน
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <div className='col-md-4'>
                 <div className='team-card bg-1'>
                   <div className='graphic'>
-                    <img src={team_img_6} alt='Team Member' />
+                    <img src={Wasinee_M} alt='Team Member'
+                      style={{
+                        borderRadius: '50%', // This makes the image a perfect circle
+                        width: '140px',     // Adjust the width as needed
+                        height: '140px',    // Adjust the height as needed
+                      }} />
                   </div>
-                  <h4 className='card-title'>Wasinee Maichandee</h4>
+                  <h4 className='card-title'>Wasinee M</h4>
                   <p className='color-blue sub-title'>
-                  Content & Admin  
+                    Content & Admin
                   </p>
-                  <p className='quote'>จงเติบโตเป็นผู้ใหญ่ที่แข็งแรง</p>
+                  {/* <p
+                  // className='quote'
+                  >จงเติบโตเป็นผู้ใหญ่ที่แข็งแรง</p> */}
                 </div>
               </div>
 
               <div className='col-md-4'>
                 <div className='team-card bg-3'>
                   <div className='graphic'>
-                    <img src={team_img_7} alt='Team Member' />
+                    <img src={team_img_6} alt='Team Member' />
                   </div>
-                  <h4 className='card-title'>Chosita Tongduk</h4>
+                  <h4 className='card-title'>Chosita T</h4>
                   <p className='color-blue sub-title'>Content & Admin  </p>
-                  <p className='quote'>เชื่อมั่น & ทำความดีด้วยสติ ✨</p>
+                  {/* <p
+                  //  
+                  // className='quote'
+
+                  >เชื่อมั่น & ทำความดีด้วยสติ ✨</p> */}
                 </div>
               </div>
               {/* <div className='col-md-4'>
@@ -237,7 +280,9 @@ const About = () => {
                   </div>
                   <h4 className='card-title'>Vivian Schnepp</h4>
                   <p className='color-green sub-title'>Graphic design</p>
-                  <p className='quote'>
+                  <p 
+                  // className='quote'
+                  >
                     เงื่อนไขที่ว่า แก้งานได้ 2 ครั้งมีอยู่จริง คือ “ครั้งแล้ว”
                     และ “ครั้งเล่า”
                   </p>
@@ -250,7 +295,9 @@ const About = () => {
                   </div>
                   <h4 className='card-title'>Thitharee </h4>
                   <p className='color-orange sub-title'>Advisor </p>
-                  <p className='quote'>เกิดมามีชีวิตเดียว อยากทำไรก็ทำไปเถอะ</p>
+                  <p 
+                  // className='quote'
+                  >เกิดมามีชีวิตเดียว อยากทำไรก็ทำไปเถอะ</p>
                 </div>
               </div> */}
 
@@ -263,7 +310,9 @@ const About = () => {
                   <p className='color-green sub-title'>
                     <br />
                   </p>
-                  <p className='quote'>
+                  <p 
+                  // className='quote'
+                  >
                     โลกนี้ไม่มีที่ยืนของคนอ่อนแอ แต่ไม่เป็นไร งั้นเรานั่งก็ได้
                   </p>
                 </div>
@@ -277,7 +326,9 @@ const About = () => {
                   <p className='color-orange sub-title'>
                     <br />
                   </p>
-                  <p className='quote'>
+                  <p 
+                  // className='quote'
+                  >
                     ไม่ต้องทำวันนี้ให้ดีที่สุด เพราะเดี๋ยวพรุ่งนี้ไม่มีอะไรให้ทำ
                   </p>
                 </div>
@@ -288,7 +339,7 @@ const About = () => {
         {/* <!-- Meet our TEAM Ends --> */}
 
         {/* <!-- Contact sec --> */}
-       
+
         <section id='' className='quick-contact'>
           <h2 className='sec-title'>Contact Us</h2>
           <p>

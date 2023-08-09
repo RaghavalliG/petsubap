@@ -11,10 +11,14 @@ import blog_thumb_3 from "../assets/image/blog_thumb_3.jpg";
 import new_text from "../assets/image/new-text.png";
 import video from "../assets/image/video.jpg";
 import faq_text_img from "../assets/image/faq_text_img.png";
-import faq_img_1 from "../assets/image/faq_img_1.png";
-import faq_img_2 from "../assets/image/faq_img_2.png";
-import faq_img_3 from "../assets/image/faq_img_3.png";
-import faq_img_4 from "../assets/image/faq_img_4.png";
+// import faq_img_1 from "../assets/image/faq_img_1.png";
+// import faq_img_2 from "../assets/image/faq_img_2.png";
+// import faq_img_3 from "../assets/image/faq_img_3.png";
+// import faq_img_4 from "../assets/image/faq_img_4.png";
+import faq_img_1 from "../assets/image/Green.svg";
+import faq_img_2 from "../assets/image/Orange.svg";
+import faq_img_3 from "../assets/image/Blue.svg";
+import faq_img_4 from "../assets/image/Yellow.svg";
 import faq_star_1 from "../assets/image/faq_star_1.png";
 import faq_star_2 from "../assets/image/faq_star_2.png";
 import faq_star_3 from "../assets/image/faq_star_3.png";
@@ -157,7 +161,7 @@ const Home = () => {
             <img src={new_text} alt='' className='floated-img mb-2' />
             <div className="embed-responsive embed-responsive-container"><iframe className="responsive-iframe" 
             // src="https://www.youtube.com/embed/zpOULjyy-n8?autoplay=1" 
-            src="https://www.youtube.com/embed/V4yyrI-48J0?autoplay=1" 
+            src="https://www.youtube.com/embed/V4yyrI-48J0?autoplay=1&mute=1" 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
              allowFullScreen autoplay="false"
             ></iframe></div>
@@ -169,17 +173,21 @@ const Home = () => {
       <div className='section-faq-home'>
         <div className='container'>
           <img src={faq_text_img} alt='' className='faq-title' />
-          <Link to='' className='faq-q'>
+          <Link to='/faqs' className='faq-q'>
             <img src={faq_img_1} alt='' />
+            <h3 className="title" style={{color:'#e2559a'}}>What are key symptoms of STIs?</h3>
           </Link>
-          <Link to='' className='faq-q'>
+          <Link to='/faqs' className='faq-q'>
             <img src={faq_img_2} alt='' />
+            <h3 className="title" style={{color:'#fff410'}}>Does everyone who has STI have symptoms?</h3>
           </Link>
-          <Link to='' className='faq-q'>
+          <Link to='/faqs' className='faq-q'>
             <img src={faq_img_3} alt='' />
+            <h3 className="title" style={{color:'#ebfdff'}}>Do condoms protect from STIs? </h3>
           </Link>
-          <Link to='' className='faq-q'>
+          <Link to='/faqs' className='faq-q'>
             <img src={faq_img_4} alt='' />
+            <h3 className="title" style={{color:'#6792ca'}}>If I test positive for HPV, do I have cancer?</h3>
           </Link>
           <Link to='' className='faq-star-1'>
             <img src={faq_star_1} alt='' />
