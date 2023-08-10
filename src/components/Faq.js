@@ -5,11 +5,13 @@ import "../style.css";
 import faq_col_1 from "../assets/image/faq-col-1.jpg";
 import faq_col_2 from "../assets/image/faq-col-2.png";
 import faq_col_3 from "../assets/image/faq-col-3.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const Faq = () => {
   const  state  = useLocation();
+  // const check = useParams();
   console.log("state value", state);
+  // console.log(check);
   const [reloadKey, setReloadKey] = useState(1)
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : []);
 
@@ -21,29 +23,46 @@ const Faq = () => {
 
 
   useEffect(() => {
-    allFaQ()
+    console.log('hello');
+    // console.log(state.state.check)
+      if(state.state?.check != '' && state.state?.check != null){
+        console.log('helo---')
+        if(state.state.check == 'faq1'){
+          allFaQ()
+          document.querySelectorAll('.all-faq .accordion-header .accordion-button')[0].classList.remove('collapsed');
+          document.querySelector('#faq_row_1').classList.add('show');
+          
+        }
+        if(state.state.check == 'faq2'){
+          allFaQ()
+          document.querySelectorAll('.all-faq .accordion-header .accordion-button')[0].classList.add('collapsed');
+          document.querySelector('#faq_row_1').classList.remove('show');
+          document.querySelectorAll('.all-faq .accordion-header .accordion-button')[1].classList.remove('collapsed');
+          document.querySelector('#faq_row_6').classList.add('show');
+        }
+        if(state.state.check == 'faq3'){
+          allFaQ()
+          document.querySelectorAll('.all-faq .accordion-header .accordion-button')[0].classList.add('collapsed');
+          document.querySelector('#faq_row_1').classList.remove('show');
+          document.querySelectorAll('.all-faq .accordion-header .accordion-button')[4].classList.remove('collapsed');
+          document.querySelector('#faq_row_9').classList.add('show');
+        }
+        if(state.state.check == 'faq4'){
+          console.log('entered');
+          HpvConnection()
+          document.querySelectorAll('.hpv .accordion-header .accordion-button')[6].classList.remove('collapsed');
+          document.querySelector('#faq_row_16').classList.add('show');
+          // document.querySelector('#faq_row_16').parent().children()classList.add('show');
+        }
+    
+      }else{
+      allFaQ()
+      }
     
     
     
-  });
-  if(state.check !== '' && state.check != null){
-    console.log('helo---')
-    if(state.check == 'faq1'){
-      document.querySelectorAll('.all-faq')[0].classList.remove('collapsed');
-    }
-    if(state.check == 'faq2'){
-      document.querySelectorAll('.all-faq')[1].classList.remove('collapsed');
-    }
-    if(state.check == 'faq3'){
-      document.querySelectorAll('.all-faq')[4].classList.remove('collapsed');
-    }
-    if(state.check == 'faq4'){
-      console.log('entered');
-      HpvConnection()
-      document.querySelectorAll('.hpv')[6].classList.remove('collapsed');
-    }
-
-  }
+  },[state.check]);
+  
   const allFaQ = () => {
     for(var i = 0; i < document.querySelectorAll('.all-faq').length; i++) {
       document.querySelectorAll('.all-faq')[i].style.display = "block";
@@ -162,7 +181,7 @@ const Faq = () => {
               <path
                 d='M27.0234 13.666C27.0234 20.3254 21.3707 25.8319 14.2617 25.8319C7.15264 25.8319 1.5 20.3254 1.5 13.666C1.5 7.00656 7.15264 1.5 14.2617 1.5C21.3707 1.5 27.0234 7.00656 27.0234 13.666Z'
                 stroke='black'
-                stroke-width='3'
+                strokeWidth='3'
               />
               <line
                 y1='-1.5'
@@ -170,7 +189,7 @@ const Faq = () => {
                 y2='-1.5'
                 transform='matrix(0.722026 0.691866 -0.722026 0.691866 22.2617 22.6672)'
                 stroke='black'
-                stroke-width='3'
+                strokeWidth='3'
               />
             </svg>
           </button>
